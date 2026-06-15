@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Sent | Launch Pilot Digital</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="site-wrap">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="header-logo">
+      <img src="Assets/LaunchPilot Digital Long No Background Heading.png" alt="Launch Pilot Digital">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="nav-cta">Let's Talk</a>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"           onclick="closeMenu()">Home</a>
+    <a href="about.html"           onclick="closeMenu()">About</a>
+    <a href="index.html#portfolio" onclick="closeMenu()">Portfolio</a>
+    <a href="contact.html"         onclick="closeMenu()">Contact</a>
+  </div>
+
+  <main>
+    <section class="thankyou-hero">
+      <div class="thankyou-icon">✓</div>
+      <p class="eyebrow">Message Received</p>
+      <h1>Thanks for reaching out.</h1>
+      <p>We've received your message and will be in touch within <strong>one business day</strong>. We're looking forward to learning more about your project.</p>
+      <div class="thankyou-actions">
+        <a class="button primary" href="index.html">Back to Home</a>
+        <a class="button secondary" href="about.html">Learn About Us</a>
+      </div>
+      <p class="thankyou-redirect">Redirecting you home in <span id="countdown">8</span>s&hellip;</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <img src="Assets/LaunchPilot Digital Long No Background Heading.png" alt="Launch Pilot Digital">
+      <p>Guiding your digital experience. Proudly based in Adelaide, South Australia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Website Design</a></li>
+        <li><a href="#">Branding</a></li>
+        <li><a href="#">SEO</a></li>
+        <li><a href="#">Automation</a></li>
+        <li><a href="#">Growth Strategy</a></li>
+        <li><a href="#">App Integration</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Launch Pilot Digital. All rights reserved.</p>
+      <p>Built by <a href="index.html">Launch Pilot Digital</a></p>
+    </div>
+  </footer>
+
+  </div> <!-- /.site-wrap -->
+
+  <script src="js/main.js"></script>
+  <script>
+    let count = 8;
+    const el = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      count--;
+      if (el) el.textContent = count;
+      if (count <= 0) {
+        clearInterval(timer);
+        window.location.href = 'index.html';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

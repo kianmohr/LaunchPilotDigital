@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Launch Pilot Digital</title>
+  <meta name="description" content="Get in touch with Launch Pilot Digital. Ready to elevate your digital experience? Let's talk.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="site-wrap">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="header-logo">
+      <img src="Assets/LaunchPilot Digital Long No Background Heading.png" alt="Launch Pilot Digital">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="nav-cta">Let's Talk</a>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"          onclick="closeMenu()">Home</a>
+    <a href="about.html"          onclick="closeMenu()">About</a>
+    <a href="portfolio.html"       onclick="closeMenu()">Portfolio</a>
+    <a href="contact.html"        onclick="closeMenu()">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <p class="eyebrow">Get In Touch</p>
+      <h1>Ready to Elevate Your <span>Digital Experience?</span></h1>
+      <p>We'd love to hear about your project. Fill in the form below or reach out directly — let's see how we can help.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+      <div class="contact-grid">
+
+        <!-- Info column -->
+        <div class="contact-info fade-up">
+          <p class="eyebrow">Contact Details</p>
+          <h2>Let's Start the <span>Conversation</span></h2>
+          <p>Whether you're ready to kick off a project or just want to explore what's possible — reach out. We'll get back to you within one business day.</p>
+
+          <div class="contact-detail">
+            <div class="contact-icon">📩</div>
+            <div class="contact-detail-text">
+              <h4>Email</h4>
+              <p>hello@launchpilotdigital.com.au</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail-text">
+              <h4>Location</h4>
+              <p>Adelaide, South Australia</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">⏱️</div>
+            <div class="contact-detail-text">
+              <h4>Response Time</h4>
+              <p>Within 1 business day</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form column -->
+        <div class="contact-form-wrap fade-up">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jane" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+61 4XX XXX XXX">
+            </div>
+            <div class="form-group">
+              <label for="service">I'm interested in&hellip;</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="website">Website Design</option>
+                <option value="branding">Branding &amp; Visual Identity</option>
+                <option value="seo">SEO &amp; Online Visibility</option>
+                <option value="automation">Business Automation</option>
+                <option value="strategy">Digital Growth Strategy</option>
+                <option value="integration">App Integration</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your project</label>
+              <textarea id="message" name="message" placeholder="Give us a brief overview of what you're looking for…" required></textarea>
+            </div>
+            <button type="submit" class="button primary form-submit">Send Message &rarr;</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <img src="Assets/LaunchPilot Digital Long No Background Heading.png" alt="Launch Pilot Digital">
+      <p>Guiding your digital experience. Proudly based in Adelaide, South Australia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Website Design</a></li>
+        <li><a href="#">Branding</a></li>
+        <li><a href="#">SEO</a></li>
+        <li><a href="#">Automation</a></li>
+        <li><a href="#">Growth Strategy</a></li>
+        <li><a href="#">App Integration</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Launch Pilot Digital. All rights reserved.</p>
+      <p>Built by <a href="index.html">Launch Pilot Digital</a></p>
+    </div>
+  </footer>
+
+  </div> <!-- /.site-wrap -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>

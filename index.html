@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launch Pilot Digital | Guiding Your Digital Experience</title>
+  <meta name="description" content="Launch Pilot Digital — Adelaide's digital agency specialising in modern website design, branding, SEO, business automation, and digital growth strategy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="site-wrap">
+
+  <!-- HEADER — centered logo, nav right -->
+  <header class="site-header">
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="header-logo">
+      <img src="Assets/LaunchPilot Digital Long No Background Heading.png" alt="Launch Pilot Digital">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="nav-cta">Let's Talk</a>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"     onclick="closeMenu()">Home</a>
+    <a href="about.html"     onclick="closeMenu()">About</a>
+    <a href="portfolio.html" onclick="closeMenu()">Portfolio</a>
+    <a href="contact.html"   onclick="closeMenu()">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- HERO — split layout -->
+    <section class="hero">
+      <canvas id="heroCanvas"></canvas>
+      <div class="hero-copy">
+        <p class="eyebrow">Digital Agency &mdash; Adelaide, Australia</p>
+        <h1>Guiding Your <span>Digital</span> Experience</h1>
+        <p>We believe every business deserves a digital presence that works as hard as they do. No fluff. No jargon. Just results.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="contact.html">Let's Get Started</a>
+          <a class="button secondary" href="portfolio.html">View Our Work</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="Assets/LaunchPilot Digital.png" alt="Launch Pilot Digital">
+      </div>
+    </section>
+
+
+    <!-- INTRO BAND — fixed bottom on desktop, inline after hero on mobile -->
+    <div class="intro-band" aria-hidden="true">
+      <p>Website Design</p>
+      <span class="divider"></span>
+      <p>Branding &amp; Identity</p>
+      <span class="divider"></span>
+      <p>SEO &amp; Visibility</p>
+      <span class="divider"></span>
+      <p>Business Automation</p>
+      <span class="divider"></span>
+      <p>Digital Growth Strategy</p>
+      <span class="divider"></span>
+      <p>App Integration</p>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="section services-bg">
+      <div class="section-heading">
+        <p class="eyebrow">What We Do</p>
+        <h2>Digital Solutions That <span>Drive Real Growth</span></h2>
+        <p>From your first website to a full digital strategy — we've got every stage of the journey covered.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">⚡</div>
+          <h3>Modern Website Design</h3>
+          <p>Fast, responsive, and visually striking websites built to convert visitors into customers.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">🎨</div>
+          <h3>Branding &amp; Visual Identity</h3>
+          <p>Logos, colour systems, and brand guidelines that make your business instantly recognisable.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">🔍</div>
+          <h3>SEO &amp; Online Visibility</h3>
+          <p>Get found online. We optimise your digital presence so the right people find you first.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">⚙️</div>
+          <h3>Business Automation</h3>
+          <p>Smart workflows that save you time, reduce manual work, and help your business scale.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">📈</div>
+          <h3>Digital Growth Strategy</h3>
+          <p>Tailored roadmaps with clear goals and measurable results to grow your business online.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">🔗</div>
+          <h3>App Integration</h3>
+          <p>Connect your tools and platforms seamlessly — from CRMs to booking systems and beyond.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="section cta-band">
+      <div class="section-heading centered">
+        <p class="eyebrow">Ready to Launch?</p>
+        <h2>Let's Build Something <span>Great Together</span></h2>
+        <p>Whether you're starting from scratch or levelling up — we're here to guide the journey.</p>
+        <a class="button primary" href="contact.html">Get In Touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <img src="Assets/LaunchPilot Digital Long No Background Heading.png" alt="Launch Pilot Digital">
+      <p>Guiding your digital experience. Proudly based in Adelaide, South Australia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Website Design</a></li>
+        <li><a href="#">Branding</a></li>
+        <li><a href="#">SEO</a></li>
+        <li><a href="#">Automation</a></li>
+        <li><a href="#">Growth Strategy</a></li>
+        <li><a href="#">App Integration</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Launch Pilot Digital. All rights reserved.</p>
+      <p>Built by <a href="index.html">Launch Pilot Digital</a></p>
+    </div>
+  </footer>
+
+  </div> <!-- /.site-wrap -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>
