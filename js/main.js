@@ -90,7 +90,6 @@ function runSpaceIntro() {
     if (t < 1) {
       requestAnimationFrame(draw);
     } else {
-      siteWrap && siteWrap.classList.add('space-landing');
       overlay.style.opacity = '0';
       setTimeout(() => overlay.remove(), 600);
     }
@@ -99,31 +98,11 @@ function runSpaceIntro() {
   requestAnimationFrame(draw);
 }
 
-// Entry: check if arriving via link transition or fresh load
+// Entry: run space intro on home page fresh load
 const siteWrap = document.querySelector('.site-wrap');
 
-let transitioning = false;
-try { transitioning = !!sessionStorage.getItem('lpd_transitioning'); } catch(e) {}
-try { if (transitioning) sessionStorage.removeItem('lpd_transitioning'); } catch(e) {}
-
-if (transitioning) {
-  const cover = document.createElement('div');
-  cover.id = 'wipe-entry-cover';
-  document.body.appendChild(cover);
-  const removeCover = () => cover.remove();
-  cover.addEventListener('animationend', removeCover);
-  setTimeout(removeCover, 700);
-
-  const edge = document.createElement('div');
-  edge.id = 'wipe-edge';
-  document.body.appendChild(edge);
-  edge.addEventListener('animationend', () => edge.remove());
-} else {
-  const isHome = location.pathname === '/' || location.pathname.endsWith('/index.html') || location.pathname === '';
-  if (isHome) {
-    runSpaceIntro();
-  }
-}
+const isHome = location.pathname === '/' || location.pathname.endsWith('/index.html') || location.pathname === '';
+if (isHome) runSpaceIntro();
 
 // Intercept internal link clicks for exit wipe
 document.addEventListener('click', e => {
@@ -133,7 +112,6 @@ document.addEventListener('click', e => {
   if (!href || href.startsWith('#') || href.startsWith('http') || link.target === '_blank') return;
 
   e.preventDefault();
-  sessionStorage.setItem('lpd_transitioning', '1');
 
   const wipe = document.createElement('div');
   wipe.id = 'page-wipe';
@@ -425,7 +403,6 @@ if (contactForm) {
 
       const result = await res.json();
       if (result.success) {
-        sessionStorage.setItem('lpd_transitioning', '1');
         window.location.href = 'thankyou.html';
       } else {
         throw new Error(result.message || 'Submission failed');

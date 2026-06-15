@@ -34,26 +34,18 @@
   height: 100%;
 }
 
-@keyframes space-land {
-  from { transform: scale(1.18); filter: blur(8px); }
-  to   { transform: scale(1);    filter: blur(0px); }
-}
-
 .site-wrap {
   transform-origin: 50vw 50vh;
 }
 
-.site-wrap.space-landing {
-  animation: space-land 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+/* === Page fade-in — runs on every page load, no JS required === */
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@keyframes page-zoom-in {
-  from { opacity: 0; transform: scale(0.94); filter: blur(4px); }
-  to   { opacity: 1; transform: scale(1);    filter: blur(0px); }
-}
-
-.site-wrap.transition-entry {
-  animation: page-zoom-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+main {
+  animation: page-fade-in 0.35s ease forwards;
 }
 
 /* === Page Transition Wipe === */
@@ -74,40 +66,6 @@
   to   { clip-path: inset(0 0%   0 0); }
 }
 
-/* Entry — dark cover overlay sweeps off the new page left to right */
-#wipe-entry-cover {
-  position: fixed;
-  inset: 0;
-  background: #06060f;
-  z-index: 9999;
-  pointer-events: none;
-  animation: wipe-entry-exit 0.55s cubic-bezier(0.76, 0, 0.24, 1) forwards;
-}
-
-@keyframes wipe-entry-exit {
-  from { clip-path: inset(0 0% 0 0%); }
-  to   { clip-path: inset(0 0% 0 100%); }
-}
-
-/* Glowing blue leading edge */
-#wipe-edge {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 4px;
-  background: linear-gradient(180deg, rgba(130, 80, 255, 0.9), var(--blue), rgba(130, 80, 255, 0.9));
-  box-shadow: 0 0 12px rgba(59, 59, 245, 1), 0 0 36px rgba(59, 59, 245, 0.7), 0 0 72px rgba(59, 59, 245, 0.3);
-  z-index: 10001;
-  pointer-events: none;
-  animation: wipe-edge-move 0.55s cubic-bezier(0.76, 0, 0.24, 1) both;
-}
-
-@keyframes wipe-edge-move {
-  0%  { left: 0%;   opacity: 1; }
-  88% { opacity: 1; }
-  100%{ left: 100%; opacity: 0; }
-}
 
 
 /* === Back to Top === */
