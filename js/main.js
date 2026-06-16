@@ -48,6 +48,12 @@ document.addEventListener('click', e => {
   setTimeout(() => { window.location.href = href; }, 420);
 });
 
+// Clean up a stuck exit wipe if the page is restored from the
+// back/forward cache (bfcache) instead of freshly loaded
+window.addEventListener('pageshow', () => {
+  document.getElementById('page-wipe')?.remove();
+});
+
 // Back to top button
 const backToTop = document.createElement('button');
 backToTop.className = 'back-to-top';
